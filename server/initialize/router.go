@@ -16,5 +16,6 @@ func Routers() *gin.Engine {
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	APIGroup := r.Group("")
 	router.InitUserRouter(APIGroup)
+	router.InitArticleRouter(APIGroup)
 	return r
 }
